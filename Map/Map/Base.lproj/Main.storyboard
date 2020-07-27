@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Map" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="abd-G0-EXe">
+                                <rect key="frame" x="0.0" y="160" width="414" height="684"/>
+                            </mapView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Where Do you want to go?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HnU-LE-uVd">
+                                <rect key="frame" x="20" y="73" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ey-1r-aOz">
+                                <rect key="frame" x="358" y="115" width="56" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <state key="normal" image="paperplane.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="getDirectionTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bRk-IN-NGQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="1Ey-1r-aOz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="358" id="9Em-Et-HZW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HnU-LE-uVd" secondAttribute="trailing" constant="20" id="Fux-vF-hvv"/>
+                            <constraint firstItem="abd-G0-EXe" firstAttribute="top" secondItem="1Ey-1r-aOz" secondAttribute="bottom" constant="5" id="HYj-oU-Cdx"/>
+                            <constraint firstItem="1Ey-1r-aOz" firstAttribute="top" secondItem="HnU-LE-uVd" secondAttribute="bottom" constant="8" id="MIV-q7-QEb"/>
+                            <constraint firstItem="HnU-LE-uVd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Tbc-JR-4jY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="abd-G0-EXe" secondAttribute="bottom" constant="18" id="WdZ-3a-0cu"/>
+                            <constraint firstItem="1Ey-1r-aOz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="XwQ-Ck-St7"/>
+                            <constraint firstItem="abd-G0-EXe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bJY-hc-QjB"/>
+                            <constraint firstItem="abd-G0-EXe" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="igB-Be-dlb"/>
+                            <constraint firstItem="abd-G0-EXe" firstAttribute="top" secondItem="1Ey-1r-aOz" secondAttribute="bottom" constant="5" id="lsC-9J-w8d"/>
+                            <constraint firstItem="HnU-LE-uVd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="29" id="pAV-vw-A24"/>
+                            <constraint firstItem="1Ey-1r-aOz" firstAttribute="top" secondItem="HnU-LE-uVd" secondAttribute="bottom" constant="8" id="sbZ-IF-Fra"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="getDirectionsButton" destination="1Ey-1r-aOz" id="vj4-V1-jIq"/>
+                        <outlet property="map" destination="abd-G0-EXe" id="kM2-lp-TmK"/>
+                        <outlet property="textFieldForAddress" destination="HnU-LE-uVd" id="DSm-X7-5Br"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-65.217391304347828" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="paperplane.fill" catalog="system" width="64" height="60"/>
+    </resources>
+</document>
